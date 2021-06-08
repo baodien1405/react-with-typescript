@@ -1,7 +1,7 @@
 
-import React, { useCallback, useRef } from 'react';
-import './App.css';
+import React, { useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import { useTodos } from "./useTodo";
+import './App.css';
 
 const Heading = ({title}: {title: string}) => <h2>{title}</h2>
 
@@ -10,6 +10,13 @@ const Box: React.FunctionComponent = ({children}) => (
     {children}
   </div>
 )
+interface Todo {
+  id: number;
+  done: boolean;
+  text: string;
+}
+
+type ActionType = {type: "ADD", text: string} | {type: "REMOVE", id: number}
 
 const Button: React.FunctionComponent<
   React.DetailedHTMLProps<

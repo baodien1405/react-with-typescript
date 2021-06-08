@@ -1,7 +1,6 @@
 
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import './App.css';
-import { useTodos } from "./useTodo";
 
 const Heading = ({title}: {title: string}) => <h2>{title}</h2>
 
@@ -10,6 +9,13 @@ const Box: React.FunctionComponent = ({children}) => (
     {children}
   </div>
 )
+interface Todo {
+  id: number;
+  done: boolean;
+  text: string;
+}
+
+type ActionType = {type: "ADD", text: string} | {type: "REMOVE", id: number}
 
 const Button: React.FunctionComponent<
   React.DetailedHTMLProps<
@@ -23,16 +29,36 @@ const Button: React.FunctionComponent<
 function App() {
   const newTodoRef = useRef<HTMLInputElement>(null);
 
-  const { todos, addTodo, removeTodo} = useTodos([
-    {id: 0, text: "Hey there", done: false}
-  ]);
-
   const onAddTodo = useCallback(() => {
     if(newTodoRef.current) {
-      addTodo(newTodoRef.current.value)
+      dispatch({
+        type: "ADD",
+        text: newTodoRef.current.value
+      })
       newTodoRef.current.value = "";
     }
-  }, [addTodo])
+  }, [])
+
+  const [todos, dispatch] = useReducer((state: Todo[], action: ActionType) => {
+    const uuid = Math.floor(Math.random() * 9999 + 1);
+    switch (action.type) {
+      case "ADD": {
+        return [
+          ...state,
+          {
+            id: uuid,
+            text: action.text,
+            done: false,
+          },
+        ];
+      }
+      case "REMOVE": {
+        return state.filter(({id}) => id !== action.id);
+      }
+      default:
+        throw new Error()
+    }
+  }, []);
 
   return (
     <div className="App">
@@ -45,7 +71,10 @@ function App() {
          <div key={todo.id}>
            {todo.text}
            <button
-            onClick={() => removeTodo(todo.id)}
+            onClick={() => dispatch({
+              type: "REMOVE",
+              id: todo.id
+            })}
            >
              Remove
            </button>

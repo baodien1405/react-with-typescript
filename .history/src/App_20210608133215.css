@@ -1,5 +1,5 @@
 body {
   font-size: xx-large;
   margin: auto;
-  max-width: 800px;
+  min-width: 800px;
 }

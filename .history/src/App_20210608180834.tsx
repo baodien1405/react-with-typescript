@@ -10,6 +10,13 @@ const Box: React.FunctionComponent = ({children}) => (
     {children}
   </div>
 )
+interface Todo {
+  id: number;
+  done: boolean;
+  text: string;
+}
+
+type ActionType = {type: "ADD", text: string} | {type: "REMOVE", id: number}
 
 const Button: React.FunctionComponent<
   React.DetailedHTMLProps<
