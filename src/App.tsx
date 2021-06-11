@@ -111,7 +111,7 @@ function App() {
     <h1>useCustomHook</h1>
      <UseCustomHookComponent />
 
-    <h1>useReducer</h1>
+    <h1>useRef</h1>
      <UseRefComponent />
 
     <h1>useReducer</h1>
