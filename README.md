@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# 1. useState
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/63298399/121625195-330b8000-ca9d-11eb-8201-e6901ce17ff2.png)
+![image](https://user-images.githubusercontent.com/63298399/121625264-546c6c00-ca9d-11eb-9213-5df87ce7c1d1.png)
 
-## Available Scripts
+## 2. useEffect
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/63298399/121625318-6c43f000-ca9d-11eb-9056-45bcd2dc083c.png)
+![image](https://user-images.githubusercontent.com/63298399/121625343-7e259300-ca9d-11eb-85cb-8aa308b0604f.png)
 
-### `yarn start`
+## 3. useContext
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/63298399/121625410-a3b29c80-ca9d-11eb-8782-a9137a0a3896.png)
+![image](https://user-images.githubusercontent.com/63298399/121625463-b6c56c80-ca9d-11eb-878a-55e6dc6fe6f1.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 4. useReducer
 
-### `yarn test`
+![image](https://user-images.githubusercontent.com/63298399/121625620-05730680-ca9e-11eb-80a2-7c874da09327.png)
+![image](https://user-images.githubusercontent.com/63298399/121625643-0dcb4180-ca9e-11eb-92fb-87f0917844fb.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 5. useRef
 
-### `yarn build`
+![image](https://user-images.githubusercontent.com/63298399/121625707-2cc9d380-ca9e-11eb-8cf4-a0b431c8064c.png)
+![image](https://user-images.githubusercontent.com/63298399/121625733-394e2c00-ca9e-11eb-8481-9b17c474f83f.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 6. useCustomHook
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/63298399/121625793-600c6280-ca9e-11eb-8f12-8c5fc2c79471.png)
+![image](https://user-images.githubusercontent.com/63298399/121625819-6ac6f780-ca9e-11eb-8732-b4b5167056aa.png)
+![image](https://user-images.githubusercontent.com/63298399/121625834-74e8f600-ca9e-11eb-9ebd-04c619e6dd2c.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
